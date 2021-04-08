@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plant Disease Detection</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}"/>
+</head>
+<body>
+<div class="content">
+    <h1 id="heading">Plant Disease Detection</h1>
+
+    <div id="image_box">
+        {% if filename %}
+        <img src="{{ url_for('display_image', filename=filename) }}"/>
+        {% else %}
+        <p>Image will be displayed here.</p>
+        {% endif %}
+    </div>
+    <br>
+    <div id="button_box">
+        <form method="post" action="/" enctype="multipart/form-data">
+            <input type="file" name="file" autocomplete="off" required>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+	<div id="prediction">
+        {% if prediction %}
+            <p>{{ prediction }}</p>
+        {% else %}
+            <p>Prediction will be displayed here.</p>
+        {% endif %}
+	</div>
+</div>
+</body>
+</html>

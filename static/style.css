@@ -1,0 +1,35 @@
+.content {
+    max-width: 1000px;
+    margin: auto;
+    text-align:center;
+    font-family: "Segoe UI",Arial,sans-serif;
+}
+
+#heading {
+    font-weight: 400;
+    
+}
+
+#image_box {
+    max-width: 1000px;
+    max-height: 400px;
+    margin: auto;
+    width: 450px;
+    height: 300px;
+    border: 1px solid black;
+}
+
+#button_box {
+    margin: auto;
+}
+
+#prediction {
+    width: 500px;
+    margin: auto;
+}
+
+#img {
+    max-width: 1000px;
+    max-height: 400px;
+    margin: auto;
+}
